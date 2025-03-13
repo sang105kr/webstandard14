@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            background-color: lightcyan;
+            font-size : 20px;
+        }
+        input[type='text']:invalid,
+        input[type='email']:invalid,
+        input[type='url']:invalid {
+            background-color: violet;
+        }
+        input[type='text']:valid,
+        input[type='email']:valid,
+        input[type='url']:valid {
+            background-color: greenyellow;
+        }        
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="이름을 입력하세요"  required><br>
+    <input type="email" placeholder="이메일을 입력하세요"  required><br>
+    <input type="url" placeholder="웹사이트 url을 입력하세요" required pattern="http://.+">
+</body>
+</html>

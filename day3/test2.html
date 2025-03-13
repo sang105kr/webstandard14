@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:empty {
+            outline:2px solid red;
+        }
+        input:focus {
+            border: none;
+            outline:2px solid green;
+            background-color: yellow;
+        }
+        p:hover {
+            background-color: yellow;
+            color:red;
+            font-weight: bold;
+            text-align: center;
+            border: 2px dashed blue;
+        }
+        input[type=number]:out-of-range{
+            background-color: red;
+            border: 2px solid orange;
+        }
+        input[type=number]:in-range{
+            background-color: green;
+            border: 2px solid greenyellow;
+        }        
+    </style>
+</head>
+<body>
+    <p></p>
+    <p>내용있음</p>
+    <input type="text">
+    <input type="number" min="1" max="10">
+</body>
+</html>
