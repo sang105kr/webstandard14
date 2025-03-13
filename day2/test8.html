@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li:nth-child(1) {
+            background-color: yellow;
+        }
+        li:nth-child(3) { /* li 부모의 3번째 자식요소 */
+            background-color: greenyellow;
+        }
+        li:nth-of-type(3) { /* li 부모의 자식으로 li와 동일한 3번째 자식요소 */
+            background-color: pink;
+        }        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>item1</li>
+        <div>div1</div>
+        <li>item2</li>
+        <li>item3</li>
+        <div>div2</div>
+        <li>item4</li>
+        <li>item5</li>
+    </ul>
+</body>
+</html>

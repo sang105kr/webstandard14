@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            outline:1px solid red;
+        }
+        input[type='submit'],
+        input[type='reset'] {
+            background-color: yellow;
+            padding:5px;
+            font-weight: 800;
+            border-radius: 10%;
+            border:none;
+        }
+        input[type='submit']:hover{
+            background-color: pink;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h3>로그인</h3>
+        <div>
+            <label for="">아이디</label>
+            <input type="text">
+        </div>
+        <div>
+            <label for="">비밀번호</label>
+            <input type="password">
+        </div>
+        <input type="submit" value="로그인">
+        <input type="reset" value="취소">
+    </form>
+</body>
+
+</html>
