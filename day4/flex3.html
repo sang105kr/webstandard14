@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            flex-grow : flex 아이템이 컨테이너의 여유 공간이 있을 때 얼마나 성장할지 비율 지정
+            flex-shrink : flex 아이템이 컨테이너의 공간 부족 시 얼마나 줄어들 수 있는지를 비율 지정
+        */
+        * {
+            outline: 1px solid red;
+        }
+        .container {
+            background-color: yellow;
+            display: flex;
+        }
+        .container .item {
+            background-color: yellowgreen;
+        }
+        .container .item.item1 {
+            flex-grow: 0;
+        }
+        .container .item.item2 {
+            flex-grow: 1;
+        }
+        .container .item.item3 {
+            flex-grow: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">item1</div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3</div>
+    </div>
+</body>
+</html>

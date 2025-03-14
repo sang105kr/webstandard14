@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            outline: 1px solid red;
+        }
+        #header {
+            height:100px;
+        }
+        #main {
+            display: flex;
+            justify-content: center;
+            background-color: pink;
+            padding: 20px;
+        }
+        #content-wrap{
+            background-color: yellow;
+            width:80vw;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: stretch;
+        }
+        #content-wrap div {
+            width:33.333%;
+            height:100px;
+            background-color: lightblue;
+        }
+        #footer {
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">header</div>
+    <div id="main">
+        <div id="content-wrap">
+            <div>item1</div>
+            <div>item2</div>
+            <div>item3</div>
+            <div>item4</div>
+            <div>item5</div>
+            <div>item6</div>
+            <div>item7</div>
+            <div>item8</div>
+            <div>item9</div>
+            <div>item9</div>
+        </div>
+    </div>
+    <div id="footer">footer</div>
+</body>
+</html>
