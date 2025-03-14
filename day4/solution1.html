@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* * {
+            outline: 1px solid red;
+        } */
+        .wrap {
+            display: flex;
+            background-color: yellow;
+            height:400px;
+            justify-content: center;
+            align-items: center;
+        }
+        .joinMember-wrap {
+            width:300px;
+            background-color: lightsalmon;
+            padding: 10px;
+            border-radius: 3%;
+        }
+        .joinMember-wrap .title{
+            text-align: center;
+        }
+        .joinMember-wrap .row{
+            display: flex;
+            justify-content: flex-start;            
+        }
+        .joinMember-wrap .row label{
+            flex-grow:0;  
+            flex-basis: 100px;
+        }
+        .joinMember-wrap .row input{
+            flex-grow:1;
+        }    
+        .joinMember-wrap .row3{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .joinMember-wrap .row3 button {
+            background-color: rgb(100, 109, 200);
+            color: #fff;
+            font-weight: bolder;
+            border: none;
+            border-radius: 15%;
+            padding: 3px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <form class="joinMember-wrap" action="">
+            <h3 class="title">회원가입</h3>
+            <div class="row">
+                <label>아이디</label><input type="text" name="" id="">
+            </div>  
+            <div class="row">
+                <label>비밀번호</label><input type="password" name="" id="">
+            </div>  
+            <div class="row2">
+                <label for="">라면</label><input type="radio" name="snack" id="">
+                <lable>떡복이</lable><input type="radio" name="snack" id="">
+                <label for="">순대</label><input type="radio" name="snack" id="">
+            </div>
+            <div class="row2">
+                <label for="">라면</label><input type="checkbox" name="" id="">
+                <lable>떡복이</lable><input type="checkbox" name="" id="">
+                <label for="">순대</label><input type="checkbox" name="" id="">
+            </div>
+            <div class="row3">
+                <!-- <input type="submit" value="가입"> -->
+                 <button>가입</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
