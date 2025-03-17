@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    /*
     * {
       outline: 1px solid red;
     }
+      */
     body {
       margin : 0;
     }
@@ -53,22 +55,32 @@
     .layout__footer-inner {
       height: 100px;
     }
-    .layout__main-inner {
+    .layout__inner.layout__main-inner {
       display: flex;
       height:300px;
       border:20px solid #000;
       box-sizing: border-box;
+      align-items: stretch;
     }
     
     .layout__main-inner .layout__content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-color: #212f34;
       flex-grow: 2;
     }
     .layout__main-inner .layout__sidebanner{
+      display: flex;
+      justify-content: center;
+      align-items: center;      
       background-color: #0f6280;
       flex-grow: 1;
     }
     .layout__main-inner .layout__sidemenu{
+      display: flex;
+      justify-content: center;
+      align-items: center;      
       background-color: #539fbb;
       flex-grow: 1;
     }
@@ -114,7 +126,7 @@
       </div>
     </div>
     <div class="layout__footer-menu">
-      <div class="layout__inner layout__footer-menu-inner">inner</div>
+      <div class="layout__inner layout__footer-menu-inner">footer-menu</div>
     </div>
     <div class="layout__footer">
       <div class="layout__inner layout_footer-inner">footer</div>
