@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      outline: 1px solid red;
+    }
+    body {
+      margin : 0;
+    }
+    .layout {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .layout__uppermost {
+      background-color: #470e50;
+    }
+    .layout__header {
+      background-color: #5d1d67;
+    }
+    .layout__nav {
+      background-color: #ab3dbc;
+    }
+    .layout__main {
+      background-color: rgb(54, 191, 191);
+    }
+    .layout__footer-menu{
+      background-color: #e5bbeb;
+    }
+    .layout__footer {
+      background-color: #eed5f2;
+    }
+    .layout__uppermost,
+    .layout__header,
+    .layout__nav,
+    .layout__main,
+    .layout__footer-menu,
+    .layout__footer {
+      display: flex;
+      justify-content: center;
+    }
+
+    .layout__uppermost-inner,
+    .layout__nav-inner,
+    .layout__footer-menu-inner{
+      height: 40px;
+    }
+    .layout__header-inner,
+    .layout__footer-inner {
+      height: 100px;
+    }
+    .layout__main-inner {
+      display: flex;
+      height:300px;
+      border:20px solid #000;
+      box-sizing: border-box;
+    }
+    
+    .layout__main-inner .layout__content{
+      background-color: #212f34;
+      flex-grow: 2;
+    }
+    .layout__main-inner .layout__sidebanner{
+      background-color: #0f6280;
+      flex-grow: 1;
+    }
+    .layout__main-inner .layout__sidemenu{
+      background-color: #539fbb;
+      flex-grow: 1;
+    }
+    .layout__inner {
+      display: flex;
+      width: 800px;
+      justify-content: center;
+      align-items: center;
+    }
+    .layout__uppermost-inner {
+      background-color: rgb(121,19,143);
+    }
+    .layout__header-inner {
+      background-color: #b84ac8;
+    }
+    .layout__nav-inner {
+      background-color: #e9b3f1;
+    }
+    .layout__footer-menu-inner {
+      background-color: #eecef3;
+    }
+    .layout__footer-inner {
+      background-color: #efe3f1;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <div class="layout__uppermost">
+      <div class="layout__inner layout__uppermost-inner">uppermost</div>
+    </div>
+    <div class="layout__header">
+      <div class="layout__inner layout__header-inner">header</div>
+    </div>
+    <div class="layout__nav">
+      <div class="layout__inner layout__nav-inner">nav</div>
+    </div>
+    <div class="layout__main">
+      <div class="layout__inner layout__main-inner">
+        <div class="layout__content">content</div>
+        <div class="layout__sidebanner">idebanner</div>
+        <div class="layout__sidemenu">sidemenu</div>
+      </div>
+    </div>
+    <div class="layout__footer-menu">
+      <div class="layout__inner layout__footer-menu-inner">inner</div>
+    </div>
+    <div class="layout__footer">
+      <div class="layout__inner layout_footer-inner">footer</div>
+    </div>
+  </div>
+</body>
+</html>
