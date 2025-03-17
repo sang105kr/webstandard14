@@ -5,19 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    
+    /*
     * {
       outline: 1px solid red;
     }
-    /* css reset */
+      */
     body {
       margin : 0;
     }
-    /* 전체 레이아웃 시작 */
     .layout {
       display: flex;
       flex-direction: column;
       justify-content: center;
+    }
+    .layout__uppermost {
+      background-color: #470e50;
+    }
+    .layout__header {
+      background-color: #5d1d67;
+    }
+    .layout__nav {
+      background-color: #ab3dbc;
+    }
+    .layout__main {
+      background-color: rgb(54, 191, 191);
+    }
+    .layout__footer-menu{
+      background-color: #e5bbeb;
+    }
+    .layout__footer {
+      background-color: #eed5f2;
     }
     .layout__uppermost,
     .layout__header,
@@ -27,7 +44,8 @@
     .layout__footer {
       display: flex;
       justify-content: center;
-    }    
+    }
+
     .layout__uppermost-inner,
     .layout__nav-inner,
     .layout__footer-menu-inner{
@@ -37,42 +55,6 @@
     .layout__footer-inner {
       height: 100px;
     }
-    .layout__inner {
-      display: flex;
-      width: 800px;
-      justify-content: center;
-      align-items: center;
-    }
-    /***************************/
-
-    /* 최상위 메뉴 */
-    .layout__uppermost {
-      background-color: #470e50;
-    }
-    .layout__uppermost-inner {
-      background-color: rgb(121,19,143);
-    }
-
-    /* 배너 */
-    .layout__header {
-      background-color: #5d1d67;
-    }
-    .layout__header-inner {
-      background-color: #b84ac8;
-    }
-
-    /* GNB메뉴 */
-    .layout__nav {
-      background-color: #ab3dbc;
-    }
-    .layout__nav-inner {
-      background-color: #e9b3f1;
-    }
-        
-    /* 주요 컨텐츠 */
-    .layout__main {
-      background-color: rgb(54, 191, 191);
-    }
     .layout__inner.layout__main-inner {
       display: flex;
       height:300px;
@@ -80,6 +62,7 @@
       box-sizing: border-box;
       align-items: stretch;
     }
+    
     .layout__main-inner .layout__content{
       display: flex;
       justify-content: center;
@@ -101,16 +84,23 @@
       background-color: #539fbb;
       flex-grow: 1;
     }
-    /* 하단 메뉴 */
-    .layout__footer-menu{
-      background-color: #e5bbeb;
+    .layout__inner {
+      display: flex;
+      width: 800px;
+      justify-content: center;
+      align-items: center;
+    }
+    .layout__uppermost-inner {
+      background-color: rgb(121,19,143);
+    }
+    .layout__header-inner {
+      background-color: #b84ac8;
+    }
+    .layout__nav-inner {
+      background-color: #e9b3f1;
     }
     .layout__footer-menu-inner {
       background-color: #eecef3;
-    }    
-    /* 하단 */
-    .layout__footer {
-      background-color: #eed5f2;
     }
     .layout__footer-inner {
       background-color: #efe3f1;
@@ -119,27 +109,15 @@
 </head>
 <body>
   <div class="layout">
-    <!-- 최상위 메뉴 -->
     <header class="layout__uppermost">
       <div class="layout__inner layout__uppermost-inner">uppermost</div>
     </header>
-    <!-- 배너 -->
     <header class="layout__header">
       <div class="layout__inner layout__header-inner">header</div>
     </header>
-    <!-- GNB메뉴 -->
     <nav class="layout__nav">
-      <div class="layout__inner layout__nav-inner">
-        <ul class="layout__nav-list">
-          <li><a href="">menu-1</a></li>
-          <li><a href="">menu-2</a></li>
-          <li><a href="">menu-3</a></li>
-          <li><a href="">menu-4</a></li>
-          <li><a href="">menu-5</a></li>
-        </ul>
-      </div>
+      <div class="layout__inner layout__nav-inner">nav</div>
     </nav>
-    <!-- 주요 컨텐츠 -->
     <main class="layout__main">
       <div class="layout__inner layout__main-inner">
         <div class="layout__content">content</div>
@@ -147,11 +125,9 @@
         <aside class="layout__sidemenu">sidemenu</aside>
       </div>
     </main>
-    <!-- 하단 메뉴 -->
     <footer class="layout__footer-menu">
       <div class="layout__inner layout__footer-menu-inner">footer-menu</div>
     </footer>
-    <!-- 하단 -->
     <footer class="layout__footer">
       <div class="layout__inner layout__footer-inner">footer</div>
     </footer>
