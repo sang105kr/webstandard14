@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    
+    /*
     * {
       outline: 1px solid red;
     }
+      */
     /* css reset */
     body {
       margin : 0;
@@ -66,9 +67,38 @@
       background-color: #ab3dbc;
     }
     .layout__nav-inner {
+      display: flex;
       background-color: #e9b3f1;
     }
         
+    .layout__nav-inner .layout__nav-list{
+      display: flex;
+      list-style-type: none;
+      padding-left: 0;
+      margin:0;
+      flex-grow: 1;
+      font-size: 1.2em;
+      color:#fff;
+    }
+    .layout__nav-inner .layout__nav-list li {
+      display: flex;
+      /* flex-grow: 1; */
+      width:calc(100%/5);
+      justify-content: center;
+    }
+    .layout__nav-inner .layout__nav-list li .layout__nav-link {
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      width:100%;
+      text-align: center;
+    }
+    .layout__nav-inner .layout__nav-list li .layout__nav-link:hover{
+      color: #fff;
+      background-color: #000;
+      text-decoration: underline;
+    }
+
     /* 주요 컨텐츠 */
     .layout__main {
       background-color: rgb(54, 191, 191);
@@ -131,11 +161,11 @@
     <nav class="layout__nav">
       <div class="layout__inner layout__nav-inner">
         <ul class="layout__nav-list">
-          <li><a href="">menu-1</a></li>
-          <li><a href="">menu-2</a></li>
-          <li><a href="">menu-3</a></li>
-          <li><a href="">menu-4</a></li>
-          <li><a href="">menu-5</a></li>
+          <li><a class="layout__nav-link" href="http://openai.com">ChatGPT</a></li>
+          <li><a class="layout__nav-link" href="http://gemini.google.com">Gemeini</a></li>
+          <li><a class="layout__nav-link" href="http://x.ai">Grok</a></li>
+          <li><a class="layout__nav-link" href="http://deepseek.com">DeepSeek</a></li>
+          <li><a class="layout__nav-link" href="http://wrtn.ai">Wrtn</a></li>
         </ul>
       </div>
     </nav>
