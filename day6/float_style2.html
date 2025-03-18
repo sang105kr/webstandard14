@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/reset.css">
+  <style>
+    ul::after{
+      content: ' ';
+      display: block;
+      clear:left; /* 항상 float과 같이 사용되어 float의 흐름을 차단하는 용도 */
+    }
+    ul li {
+      float:left;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+  <span>item4</span>  
+</body>
+</html>
