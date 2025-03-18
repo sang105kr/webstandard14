@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a {
+      text-decoration: none;
+      cursor: pointer;  /* 기본값 */
+    }
+    a:link { /* 방문한적 없는경우 */
+      color: pink; /* 기본값 : 파란색 */
+    }    
+    a:visited { /* 방문한 경우 */
+      color:green; /* 기본값 : 보라색 */
+    }    
+
+    a:hover { /* 링크 위에 마우스를 올렸을때 */
+      color: violet;
+    }
+    a:active {/* 사용자가 링크를 클릭하는 순간 적용 */
+      color:lightblue; /* 기본값 : 빨간색 */
+    }    
+    a:focus { /* 링크가 포커스된 상태 일때 적용, 주로 키보드로 탐색할때  */
+      color:red;
+    }
+  </style>
+</head>
+<body>
+  <a href="http://www.naver.com" target="blank">네이버</a>  
+  <!-- <iframe src="/day6/test1.html" frameborder="0">
+
+  </iframe> -->
+  <a href="/day6/test2.html">normal</a>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      outline: 1px solid red;
+    }
+
+    div:nth-last-of-type(2) span{
+      display: inline;
+      width: 100px; /* inline요소는 크기를 가질수 없다 */
+      height: 50px;
+      background-color: pink;
+    }
+
+    div:last-of-type span{
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <span>Lorem, ipsum dolor.</span>
+  <span>Lorem, ipsum dolor.</span>
+  <span>Lorem, ipsum dolor.</span>
+  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae rerum soluta repudiandae possimus, inventore minima, odit quia voluptates pariatur voluptatum eaque aspernatur dolorem ab? Dolore eaque ab consequuntur accusantium.</div>
+  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae rerum soluta repudiandae possimus, inventore minima, odit quia voluptates pariatur voluptatum eaque aspernatur dolorem ab? Dolore eaque ab consequuntur accusantium.</div>
+  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae rerum soluta repudiandae possimus, inventore minima, odit quia voluptates pariatur voluptatum eaque aspernatur dolorem ab? Dolore eaque ab consequuntur accusantium.</div>
+  <div><span>Lorem, ipsum.</span><span>Lorem, ipsum.</span><span>Lorem, ipsum.</span></div>
+  <div><span>Lorem, ipsum.</span><span>Lorem, ipsum.</span><span>Lorem, ipsum.</span></div>
+</body>
+</html>
