@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basis Example</title>
+    <link rel="stylesheet" href="/reset.css">
+    <style>
+      * {outline:1px solid red;}
+      header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        justify-content: flex-start;
+        align-items: stretch;
+      }
+      /*
+      .logo, .menu, .membership {
+        flex: 0 1 auto;
+      }
+        */
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .logo, .membership {
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+      .menu {
+        display: flex;
+        flex-wrap: wrap;
+
+        flex: 1 1 auto;
+      }
+      .menu .menu__item{
+        display: flex;
+        flex: 1 1 auto;
+        justify-content:center;
+        align-items: center;
+
+        min-width: 60px; /* 최소폭을 60px로 설정 */
+      }
+      .membership {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <ul class="logo">
+      <li class="logo__img">icon</li>
+      <li class="logo__text">
+        <span class="logo__text-left">photobox</span>
+        <span class="logo__text-right">.com</span>
+      </li>
+    </ul>
+    <nav class="menu">
+      <a class="menu__item" href="">menu-1</a>
+      <a class="menu__item" href="">menu-2</a>
+      <a class="menu__item" href="">menu-3</a>
+      <a class="menu__item" href="">menu-4</a>
+    </nav>
+    <ul class="membership">
+      <li class="join">membership join</li>
+      <li class="login">login-in</li>
+    </ul>
+  </header>
+</body>
+</html>

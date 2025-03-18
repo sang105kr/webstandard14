@@ -1,7 +1,7 @@
 <!-- 
  메뉴를 가로방향으로 구현하기 
  1. normal layout(일반 레이아웃) : inline,inline-block,block
- 2. flex layout(일반 레이아웃) : container, item
+ 2. flex layout(플렉스 레이아웃) : container, item
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -11,10 +11,14 @@
   <title>Document</title>
   <link rel="stylesheet" href="/reset.css">
 
+  <!-- google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
   
+  <!-- google icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+
   <style>
     * {
       outline: 1px solid red;
@@ -101,11 +105,54 @@
       margin-right: 5px;
     }
   </style>
+  <style>
+    .nanum-pen-script-regular {
+      font-family: "Nanum Pen Script", cursive;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 2rem;
+    }  
+    
+    .dm-serif-text-regular {
+      font-family: "DM Serif Text", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 2rem;
+    }
+    
+    .dm-serif-text-regular-italic {
+      font-family: "DM Serif Text", serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 2rem;
+    }
+    
+    .material-symbols-outlined:nth-of-type(1){
+      font-size: 2rem;
+      color: #f00;
+      font-weight: 300;
+    }
+    .material-symbols-outlined:nth-of-type(2){
+      font-size: 3rem;
+      color: #0f0;
+      font-weight: 600;
+    }
+    .material-symbols-outlined:nth-of-type(3){
+      font-size: 4rem;
+      color: #00f;
+      font-weight: 900;
+    }
+  </style>
 </head>
 <body>
+  <div>
+    <span class="material-symbols-outlined">search</span>
+    <span class="material-symbols-outlined">search</span>
+    <span class="material-symbols-outlined">search</span>
+  </div>
   <!-- normal layout -->
   <nav>
-    <ul class="menu1">
+    <ul class="menu1 nanum-pen-script-regular">
       <li><a href="">menu-1</a></li>
       <li><a href="">menu-2</a></li>
       <li><a href="">menu-3</a></li>
@@ -117,7 +164,7 @@
   <hr>
   <!-- flex layout -->
   <nav>
-    <ul class="menu2">
+    <ul class="menu2 dm-serif-text-regular-italic">
       <li><a href="">menu-1</a></li>
       <li><a href="">menu-2</a></li>
       <li><a href="">menu-3</a></li>
