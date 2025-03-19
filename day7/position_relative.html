@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      outline: 1px solid red;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+    .box.box1 {
+      background-color: lightblue;
+    }
+    .box.box2 {
+      /* 엘리먼트를 원래 위치를 기준으로 상대적으로 이동 */
+      /* 엘리먼트는 원래 차리에서 차지하는 공간을 유지 */
+      position: relative; 
+      background-color: lightcoral;
+      left:200px;
+      bottom:-100px;
+    }
+    .box.box3 {
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+  <div class="box box1">box1</div>
+  <div class="box box2">box2</div>
+  <div class="box box3">box3</div>
+</body>
+</html>
