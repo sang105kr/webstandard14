@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/023d8f21ed.js" crossorigin="anonymous"></script>
+  <style>
+
+    * {
+      /* outline:1px solid red; */
+      margin:0;
+      padding:0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      color : #eee;
+      text-decoration: none;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 12px;
+      color : #eee;
+      background-color: #333;
+    }
+
+    .navbar .navbar__logo,
+    .navbar .navbar__menu,
+    .navbar .navbar__sns{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+    }
+
+    .navbar .navbar__logo li:nth-child(1){
+      margin-right: 5px;
+    }
+
+    .navbar .navbar__menu li a{
+      padding: 0px 15px;
+    }
+    .navbar .navbar__menu li a:hover{
+      text-decoration: underline;
+      color:#aaa;
+    }
+
+    .navbar .navbar__sns li {
+      margin-right: 5px;
+    }
+    .navbar .navbar__sns li:hover{
+      color:#aaa;
+    }
+
+    .navbar .burger{
+      display: none;
+    }
+
+    .fa-brands.fa-joomla {
+      font-size: 1.4rem;
+      color:pink;
+    }
+
+    /* 모바일 767px이하 */
+    @media screen and (max-width:767px){
+      .navbar{
+        flex-direction: column;
+        position: relative;
+      }
+
+      .navbar .navbar__logo{
+        align-self: center;
+      }
+      .navbar .navbar__logo.active{
+        align-self: flex-start;
+      }
+
+      .navbar .navbar__menu {
+        flex-direction: column;
+        border-top: 1px solid #999;
+        border-bottom: 1px solid #999;
+      }
+      .navbar .navbar__menu li {
+        width:100%;
+        text-align: center;
+        padding: 3px 5px;
+      }
+      .navbar .navbar__menu li a{
+        display: inline-block;
+        box-sizing: border-box;
+        width:100%;
+      }
+      .navbar .navbar__menu li a:hover{
+        background-color: #999;
+      }
+
+      .navbar .navbar__menu,
+      .navbar .navbar__sns{
+        display:none;
+      }
+      .navbar .navbar__logo{
+        align-self: flex-start;
+      }
+
+      .navbar .navbar__logo.active{
+        align-self: center;
+      }      
+      .navbar .navbar__menu.active,
+      .navbar .navbar__sns.active{
+        display:flex;
+      }
+
+     .navbar .burger{
+       display: block;
+       position:absolute;
+       top:10px;
+       right:15px;
+      }
+    }
+  </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Roboto:ital@0;1&display=swap" rel="stylesheet">  
+  <style>
+    h3 {
+      font-family: 'Gamja Flower', cursive;
+      font-size: 2rem;
+      color : #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- <h3>KH정보교육원</h3>
+  <i class="fa-brands fa-joomla"></i>
+  <i class="fa-brands fa-facebook"></i>
+  <i class="fa-brands fa-square-twitter"></i>
+  <i class="fa-brands fa-square-instagram"></i>
+  <i class="fa-solid fa-bars"></i> -->
+  <div class="navbar">
+    <ul class="navbar__logo">
+      <li><a href="#"><i class="fa-brands fa-joomla"></i></a></li>
+      <li class="title"><span>KH정보교육원</span></li>
+    </ul>
+    <ul class="navbar__menu">
+      <li><a href="http://www.naver.com">java</a></li>
+      <li><a href="http://www.google.com">html</a></li>
+      <li><a href="#">css</a></li>
+      <li><a href="#">javascript</a></li>
+      <li><a href="#">spring</a></li>
+    </ul>
+    <ul class="navbar__sns">
+      <li><i class="fa-brands fa-facebook"></i></li>
+      <li><i class="fa-brands fa-square-twitter"></i></li>
+      <li><i class="fa-brands fa-square-instagram"></i></li>
+    </ul>
+    <div class="burger"><i class="fa-solid fa-bars"></i></div>
+  </div>  
+  <script>
+    let buggerBtn = document.querySelector('.burger');
+    let logo = document.querySelector('.navbar .navbar__logo');
+    let menu = document.querySelector('.navbar .navbar__menu');
+    let sns = document.querySelector('.navbar .navbar__sns');
+    buggerBtn.addEventListener('click',()=>{
+      logo.classList.toggle('active'); 
+      menu.classList.toggle('active');
+      sns.classList.toggle('active'); 
+    });
+  </script>
+</body>
+</html>
