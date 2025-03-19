@@ -5,8 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex Basis Example</title>
     <link rel="stylesheet" href="/reset.css">
+    <!-- 구글 아이콘 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=photo_camera" />
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <style>
       * {outline:1px solid red;}
+
+      .noto-sans-myfont {
+        font-family: "Noto Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500; /* 100 ~ 900 */
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+      }
+
       header {
         display: flex;
         flex-direction: row;
@@ -14,6 +30,11 @@
 
         justify-content: flex-start;
         align-items: stretch;
+        
+        height:100px;
+        background-color: #EEEEEE;
+
+
       }
       /*
       .logo, .menu, .membership {
@@ -29,8 +50,20 @@
         flex-grow: 0;
         flex-shrink: 0;
       }
+      .logo .logo__img {
+        margin-right: 10px;
+      }
+      .logo .logo__text .logo__text-left{
+        text-transform: capitalize;
+      }
+      .logo .logo__text .logo__text-right{
+        color : #a12b06
+      }
+
       .menu {
         display: flex;
+        align-items: center;
+
         flex-wrap: wrap;
 
         flex: 1 1 auto;
@@ -51,9 +84,13 @@
     </style>
 </head>
 <body>
-  <header>
+  <header class="noto-sans-myfont">
     <ul class="logo">
-      <li class="logo__img">icon</li>
+      <li class="logo__img">
+        <span class="material-symbols-outlined">
+        photo_camera
+        </span>
+      </li>
       <li class="logo__text">
         <span class="logo__text-left">photobox</span>
         <span class="logo__text-right">.com</span>

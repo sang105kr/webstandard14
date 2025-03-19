@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .visible {
+      /* 사용자 눈에 보이지도 않고 물리적 공간도 차지하지 않음 */
+      display: none;
+    }
+    .hidden {
+      /* 사용자 눈에 보이지는 않지만 물리적 공간을 차지 */
+      visibility: hidden; 
+    }
+  </style>
+</head>
+<body>
+  <button style="display:none">클릭1</button>
+  <!-- <button style="visibility:hidden">클릭2</button> -->
+  <button>클릭3</button>
+</body>
+</html>

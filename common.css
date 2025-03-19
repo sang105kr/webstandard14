@@ -1,0 +1,17 @@
+@charset 'utf-8';
+/* 버튼 */
+.btn-primary {
+  background-color: yellow;
+  color : black;
+  width : 70px;
+  padding: 5px 0;
+  border: none;
+  border-radius: 5%;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+}
+.btn-primary:hover {
+  background-color: lightcoral;
+  color : #fff;
+}
