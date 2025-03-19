@@ -13,8 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <style>
+      /*
       * {outline:1px solid red;}
-
+      */
       .noto-sans-myfont {
         font-family: "Noto Sans", sans-serif;
         font-optical-sizing: auto;
@@ -45,6 +46,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 0 20px;
       }
       .logo, .membership {
         flex-grow: 0;
@@ -53,6 +55,10 @@
       .logo .logo__img {
         margin-right: 10px;
       }
+      .logo .logo__img .material-symbols-outlined{
+        vertical-align: bottom; /* 인라인 요소의 수직 정렬 */
+      }
+
       .logo .logo__text .logo__text-left{
         text-transform: capitalize;
       }
@@ -62,24 +68,39 @@
 
       .menu {
         display: flex;
-        align-items: center;
+        /*align-items: center;*/
+        align-content: space-evenly;
 
         flex-wrap: wrap;
-
         flex: 1 1 auto;
+
+        text-transform: uppercase;
       }
       .menu .menu__item{
         display: flex;
         flex: 1 1 auto;
         justify-content:center;
         align-items: center;
-
-        min-width: 60px; /* 최소폭을 60px로 설정 */
+        min-width: 100px; /* 최소 폭 */
       }
       .membership {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 0 20px;
+      }
+
+      .membership .join {
+        margin-right: 10px;
+      }
+      
+      .membership .join,
+      .membership .login {
+        background-color: #5C5E5B;
+        color: #fff;
+        text-transform: uppercase;
+        padding : 5px 10px;
+        border-radius: 10px;
       }
     </style>
 </head>
@@ -97,10 +118,10 @@
       </li>
     </ul>
     <nav class="menu">
-      <a class="menu__item" href="">menu-1</a>
-      <a class="menu__item" href="">menu-2</a>
-      <a class="menu__item" href="">menu-3</a>
-      <a class="menu__item" href="">menu-4</a>
+      <a class="menu__item" href="">compay</a>
+      <a class="menu__item" href="">services</a>
+      <a class="menu__item" href="">shopping</a>
+      <a class="menu__item" href="">about us</a>
     </nav>
     <ul class="membership">
       <li class="join">membership join</li>
