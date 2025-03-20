@@ -15,8 +15,10 @@
       justify-content: center;
       align-items: center;
       background-color: #eeee;      
+      position: relative;
     }
     .wrap .boxes{
+      
       background-color: yellow;
       width: 300px;
       height: 300px;
@@ -31,10 +33,12 @@
     .box.box2 {
       /* 기준 : 조상 엘리먼트중 static이 아닌 엘리먼트 */
       /* 엘리먼트는 원래 차리에서 차지하는 공간을 유지(X) */
-      position: absolute; 
+      position: absolute;
       background-color: lightcoral;      
-      top:0;
+      
+      bottom:0;
       right:0;
+      
     }
     .box.box3 {
       background-color: lightgreen;
