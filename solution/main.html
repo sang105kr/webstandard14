@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <div class="layout">
+    <div class="layout__uppermost">
+      <div class="layout__inner layout__uppermost-inner">
+        <a href="">로그인</a> <span>|</span> <a href="">회원가입</a>
+      </div>
+    </div>
+    <div class="layout__header">
+      <div class="layout__inner layout__header-inner"></div>
+    </div>
+    <div class="layout__nav">
+      <div class="layout__inner layout__nav-inner">
+        <ul class="menu">
+          <li class="item item1"><a href="#">웹표준</a></li>
+          <li class="item item2"><a href="#">자바</a></li>
+          <li class="item item3"><a href="#">안드로이드</a></li>
+          <li class="item item4"><a href="#">데이터베이스</a></li>
+          <li class="item item5"><a href="#">스프링</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="layout__main">
+      <div class="layout__inner layout__main-inner">
+        <div class="left">left</div>
+        <div class="right">
+          <div class="join-wrap">
+            <h3>회원가입</h3>
+            <form action="">
+              <ul>
+                <li>
+                  <label for="id">아이디</label>
+                </li>
+                <li><input type="text" id="id"></li>
+                <li>
+                  <label for="pw">비밀번호</label>
+                </li>
+                <li><input type="password" id="pw"></li>
+                <li>
+                  <label for="pwchk">비밀번호확인</label>
+                </li>
+                <li><input type="password" id="pwchk"></li>
+                <li>
+                  <label for="tel">전화번호</label>
+                </li>
+                <li><input type="tel" id="tel"></li>
+                <li>
+                  <label for="nickname">별칭</label>
+                </li>
+                <li><input type="text" id="nickname"></li>
+                <li>
+                  <label for="region">지역</label>
+                </li>
+                <li>
+                  <select name="" id="region">
+                    <option value="">==선택==</option>
+                    <option value="">서울</option>
+                    <option value="">부산</option>
+                    <option value="">대구</option>
+                    <option value="">대전</option>
+                    <option value="">울산</option>
+                  </select>
+                </li>
+                <li>
+                  <label>성별</label>
+                </li>
+                <li>
+                  <input type="radio" id="male" name="gender"><label for="male">남자</label>
+                  <input type="radio" id="female" name="gender"><label for="female">여자</label>
+                </li>
+                <li>
+                  <label>취미</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="reading"><label for="reading">독서</label>
+                  <input type="checkbox" id="music"><label for="music">음악감상</label>
+                  <input type="checkbox" id="exercise"><label for="exercise">운동</label>
+                  <input type="checkbox" id="game"><label for="game">게임</label>
+                </li>
+                <li>
+                  <label for="birth">생년월일</label>
+                </li>
+                <li>
+                  <input type="date" name="" id="birth">
+                </li>
+                <li>
+                  <button class="joinBtn">회원가입</button>
+                  <!-- <input type="submit" class="joinBtn" value="회원가입"> -->
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layout__footer">
+      <div class="layout__inner layout__footer-inner">
+        <p>Copyright by Gildong Hong. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

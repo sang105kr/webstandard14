@@ -1,0 +1,103 @@
+@charset 'utf-8';
+* {
+  outline: 1px solid red;
+}
+/* css 리셋 */
+body {
+  margin : 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* 레이아웃 */
+.layout__uppermost,
+.layout__header,
+.layout__nav,
+.layout__main,
+.layout__footer {
+  display: flex;
+  justify-content: center;
+}
+
+.layout__inner {
+  flex: 0 0 600px;
+}
+/* 최상단메뉴 */
+.layout__uppermost {
+  background-color: #000;
+}
+.layout__inner.layout__uppermost-inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height:50px;
+
+  font-size: 0.8rem;
+  color : #fff;
+  font-weight: bold;
+}
+.layout__inner.layout__uppermost-inner span {
+  margin: 0 5px;
+}
+/* 헤더 */
+.layout__inner.layout__header-inner {
+  background-image: url('https://plus.unsplash.com/premium_photo-1674327105074-46dd8319164b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:150px;
+}
+/* 메인메뉴 */
+.layout__inner.layout__nav-inner {
+  height:50px;
+  background-color: #000;
+}
+.layout__inner.layout__nav-inner .menu{
+  display: flex;
+  justify-content: space-evenly;
+
+  color : #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.layout__inner.layout__nav-inner .menu .item:hover{
+  text-decoration: underline;
+}
+/* 컨텐츠 */
+.layout__inner.layout__main-inner{
+  display: flex;
+}
+.layout__inner.layout__main-inner .left {
+  flex-grow: 2;
+  background-color: lightskyblue;
+}
+.layout__inner.layout__main-inner .right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 8;
+  background-color: lightcyan;
+}
+.layout__inner.layout__main-inner .right .join-wrap{
+  width: 250px;
+  background-color: #fff;
+}
+/* footer */
+.layout__inner.layout__footer-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:70px;
+
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: bold;
+  background-color: #999;
+}
+
