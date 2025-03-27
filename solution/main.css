@@ -1,7 +1,7 @@
 @charset 'utf-8';
-* {
+/* * {
   outline: 1px solid red;
-}
+} */
 /* css 리셋 */
 body {
   margin : 0;
@@ -12,7 +12,10 @@ a {
 }
 ul {
   list-style-type: none;
-  padding-left: 0;
+}
+ul, h3 {
+  margin: 0;
+  padding: 0;
 }
 
 /* 레이아웃 */
@@ -55,12 +58,17 @@ ul {
 }
 /* 메인메뉴 */
 .layout__inner.layout__nav-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   height:50px;
   background-color: #000;
 }
 .layout__inner.layout__nav-inner .menu{
   display: flex;
   justify-content: space-evenly;
+  flex-grow: 1;
 
   color : #fff;
   font-size: 0.8rem;
@@ -83,10 +91,41 @@ ul {
   align-items: center;
   flex-grow: 8;
   background-color: lightcyan;
+
+  padding: 50px 0;
 }
 .layout__inner.layout__main-inner .right .join-wrap{
   width: 250px;
+}
+.layout__inner.layout__main-inner .right .join-wrap .title{
+  text-align: center;
+  margin: 10px;
+  letter-spacing: 0.5rem; /* 자간 간격 */
+}
+.layout__inner.layout__main-inner .right .join-wrap .join {
   background-color: #fff;
+}
+
+.layout__inner.layout__main-inner .right .join-wrap .join input[type="text"],
+.layout__inner.layout__main-inner .right .join-wrap .join input[type="password"],
+.layout__inner.layout__main-inner .right .join-wrap .join input[type="tel"],
+.layout__inner.layout__main-inner .right .join-wrap .join input[type="date"]{
+  box-sizing: border-box;
+  width:100%;
+}
+.layout__inner.layout__main-inner .right .join-wrap .join .item-wrap .item{
+  margin: 0.3rem;
+}
+.layout__inner.layout__main-inner .right .join-wrap .join .hobby {
+  display: flex;
+  justify-content: space-between;
+}
+.layout__inner.layout__main-inner .right .join-wrap .join .joinBtn {
+  width: 100%;
+  background-color: green;
+  color: #fff;
+  font-weight: bold;
+  padding:5px;
 }
 /* footer */
 .layout__inner.layout__footer-inner {
