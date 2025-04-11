@@ -42,9 +42,16 @@
       //$input.value = $input.value + evt.target.textContent;
       $input.value += evt.target.textContent;
     });
+
     $result.addEventListener('click',function(evt){
-      $input.value = eval($input.value);
-    })
+      try{
+        $input.value = eval($input.value);
+      }catch(err){
+        console.log('오류발생!');
+        $input.value = 'Error!';
+      }
+    });
+
   </script>
 </body>
 </html>
