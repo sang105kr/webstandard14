@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      text-align: right;
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div><input type="text" readonly></div>
+  <div>
+    <button class="btn1">1</button>
+    <button class="btn2">2</button>
+    <button class="plus">+</button>
+    <button class="result">=</button>
+    <button class="AC">AC</button>
+  </div>
+  <script>
+    const $AC = document.querySelector('.AC');
+    const $input = document.querySelector('input');
+    const $btn1 = document.querySelector('.btn1');
+    const $btn2 = document.querySelector('.btn2');
+    const $plus = document.querySelector('.plus');
+    const $result = document.querySelector('.result');
+    $btn1.addEventListener('click',function(evt){
+        console.log('클릭!');
+        console.log(evt.target.textContent);
+        $input.value += evt.target.textContent;
+    });
+    $btn2.addEventListener('click',function(evt){
+      $input.value += evt.target.textContent;
+    });    
+    $AC.addEventListener('click',function(evt){
+      $input.value = '';
+    });
+    $plus.addEventListener('click',function(evt){
+      //$input.value = $input.value + evt.target.textContent;
+      $input.value += evt.target.textContent;
+    });
+    $result.addEventListener('click',function(evt){
+      $input.value = eval($input.value);
+    })
+  </script>
+</body>
+</html>
