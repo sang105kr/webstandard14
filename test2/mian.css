@@ -1,0 +1,157 @@
+button {
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    margin: 5px 0;
+    width: 250px;
+    font-weight: bold;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.layout__1 {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+}
+
+.layout__1-1 {
+    display: flex;
+    justify-content: center;
+}
+
+.layout__1 .top {
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    width: 600px;
+    height: 50px;
+    align-items: center;
+}
+
+.layout__1 .top a {
+    color: white;
+    font-size: 0.8rem;
+    justify-content: flex-end;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-right: 10px;
+}
+
+.top a:first-child {
+    border-right: 1px solid white;
+    margin-right: 10px;
+    padding: 1px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header img {
+    height: 150px;
+    width: 600px;
+}
+
+menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu .menu1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu1__menu {
+    background-color: black;
+    display: flex;
+    width: 600px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu1__menu a {
+    color: white;
+    text-decoration: none;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.main__main1 {
+    display: flex;
+    background-color: lightskyblue;
+    justify-content: flex-end;
+    width: 600px;
+}
+
+.main__main2 {
+    background-color: lightcyan;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.main__main1-1 {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 250px;
+    padding: 10px;
+}
+
+.main__main1-1 label {
+    padding: 0.3px;
+}
+
+.main__main1-1 input {
+    margin: 0;
+}
+
+.main__head {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    letter-spacing: 0.5em;
+}
+
+select {
+    width: 80px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__1 {
+    display: flex;
+    height: 70px;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    color: white;
+    background-color: gray;
+    font-weight: bold;
+    text-transform: capitalize;
+}

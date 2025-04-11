@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="wrap">
+    <ul class="menu">
+      <li class="item item1">menu1</li>
+      <li class="item item2">menu2</li>
+      <li class="item item3">menu3</li>
+    </ul>
+    <button class="btn">클릭</button>
+  </div>
+  <script>
+    //1) 이벤트소스(=이벤트 타겟) : 이벤트가 발생될 엘리먼트
+    const $btn = document.querySelector('.btn');
+    //2) 이벤트리스너 : addEventListner 이벤트를 감지할수 있도록 센서 등록
+    //3) 이벤트타입 : 'click' 클릭할때
+    //4) 이벤벤트 핸들러 : function(){} 이벤트가 발생했을때 처리할로직
+    //5) 이벤트 객체 : evt 브라우저가 생성해서 이벤트 핸들러의 첫번째 매개변수에 전달
+    //6) 이벤트 흐름 : 캡처링단계 : true, 버블링단계(기본값):false
+    $btn.addEventListener('click',function(evt){
+      const $item = document.querySelector('.item.item1');
+      $item.style.backgroundColor = 'yellow';
+      console.log(evt);
+      console.log(evt.target);  // 이벤트가 발생한 요소
+      console.log(evt.currentTarget); // 이벤트 리스너가 등록된 요소
+    },false);
+  </script>
+</body>
+</html>

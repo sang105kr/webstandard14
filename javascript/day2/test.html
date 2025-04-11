@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="test.js"></script>
+  <script src="test2.js"></script>
+</head>
+<body>
+  <!-- inline방식 : 시작태그에 on+이벤트명='js코드' -->
+  <button onclick="window.alert('hi')">클릭</button>
+  <button onclick="console.log(1);console.log(2)">클릭2</button>
+  <button onclick="console.log(greeting())">클릭3</button>
+  <button onclick="alert(greeting())">클릭4</button>
+  <button onclick="console.log(add(20,30))">클릭5</button>
+  <button onclick="alert(add(20,30))">클릭5</button>
+  <button onclick="alert(minus(20,30))">클릭6</button>
+  <!-- internal 방식 : <script>엘리먼트 컨텐츠영역에 작성 -->
+  <script>
+    function greeting(){
+      return 'hi';
+    }
+    //alert(greeting());
+    console.log(add(10,20))
+  </script>
+  <script>
+    console.log(x + y)
+  </script>
+</body>
+</html>

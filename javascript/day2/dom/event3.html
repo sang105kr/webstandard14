@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * { outline: 1px solid red;}
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height : 100px;
+      background-color: yellow;
+      padding-left: 0;
+    }
+    ul li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height:50px;
+      background-color: yellowgreen;
+      flex-basis: 100px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>
+      <button class="btn btn1">클릭1</button>
+    </li>
+    <li>
+      <button class="btn btn2">클릭2</button>
+    </li>    
+  </ul>
+  <script>
+    const $ul = document.querySelector('ul');
+    $ul.addEventListener('click',function(evt){
+      console.log(evt.target);  // 실제 이벤트가 발생한 엘리먼트
+      console.log(evt.currentTarget);  // 이벤트 리스너를 등록한 엘리먼트
+      console.log(evt.target.textContent);
+      console.log(evt.target.classList[1])
+      if(evt.target.classList[1] == 'btn1'){
+        alert(evt.target.textContent)
+      }else if(evt.target.classList[1] == 'btn2'){
+        alert(evt.target.textContent)
+      }
+    },false);
+  </script>
+</body>
+</html>

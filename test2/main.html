@@ -1,66 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mian.css">
+
+    <style>
+        /* * {
+            outline: 1px solid red;
+        } */
+    </style>
 </head>
+
 <body>
-    <div class="container">
-        <menu class="menu">
-            <div class="login">
-                <span class="login1">로그인</span>
-                <span class="login2"> |  </span>
-                <span class="login3">회원가입</span>
-            </div>
-        </menu>
-        <header class="header">
-            <img class="img" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        </header>
-        <nav class="nav">
-            <ul class="ul">
-                <li class="list">
-                    <a href="" class="link">웹표준</a>
-                    <a href="" class="link">자바</a>
-                    <a href="" class="link">안드로이드</a>
-                    <a href="" class="link">데이터베이스</a>
-                    <a href="" class="link">스프링</a>
-                </li>
-            </ul>
-        </nav>
-        <main class="main">
-            <div class="main_left"></div>
-            <div class="main_right">
-                <h3 class="h3">회원가입</h3>
-                <div class="membership">
-                    <label class="block" for="">아이디</label><input class="width" type="text">
-                    <label class="block" for="">비밀번호</label><input class="width" type="password">
-                    <label class="block" for="">비밀번호확인</label><input class="width" type="password">
-                    <label class="block" for="">전화번호</label><input class="width" type="tel">
-                    <label class="block" for="nickname">별칭</label><input class="width" id="nickname" type="text">
-                    <label class="block" for="">지역</label>
-                    <select class="block" name="지역">
-                        <option value="">==선택==</option>
-                        <option value="">서울</option>
-                        <option value="">부산</option>
-                        <option value="">대전</option>
-                        <option value="">대구</option>
-                        <option value="">울산</option>
-                    </select>
-                    <label class="block" for="">성별</label>
-                    <input type="radio" name="gender"id="male"><label for="male">남자</label><input type="radio" name="gender"id="female"><label for="female">여자</label>
-                    <label class="block" for="">취미</label>
-                    <input id="read" type="checkbox"><label for="read">독서</label><input id="listen" type="checkbox"><label for="listen">음악감상</label><input id="sports" type="checkbox"><label for="sports">운동</label><input id="game" type="checkbox"><label for="game">게임</label>
-                    <label class="block" for="">생년월일</label>
-                    <input class="block width" type="date">
-                    <button class="button block width">회원가입</button>
+    <div class="layout">
+        <div class="layout__1">
+            <div class="layout__1-1">
+                <div class="top">
+                    <a href="">로그인</a>
+                    <a href="">회원가입</a>
                 </div>
             </div>
-        </main>
-        <footer class="footer">
-            {Cpyright by Gildong Hong. All Rights Reserved.}
-        </footer>
-    </div>
+            <header class="header">
+                <img src="https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8JUVDJUJCJUI0JUVEJTkzJUE4JUVEJTg0JUIwfGVufDB8fDB8fHww"
+                    alt="">
+            </header>
+            <div class="menu">
+                <div class="menu1">
+                    <div class="menu1__menu">
+                        <a href="">웹표준</a>
+                        <a href="">자바</a>
+                        <a href="">안드로이드</a>
+                        <a href="">데이터베이스</a>
+                        <a href="">스프링</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="main__main1">
+                    <div class="main__main2">
+                        <h3 class="main__head">회원가입</h3>
+                        <div class="main__main1-1">
+                            <label for="">아이디</label>
+                            <input type="text">
+                            <label for="">비밀번호</label>
+                            <input type="password" id="password" name="">
+                            <label for="">비밀번호확인</label>
+                            <input type="password" id="password" name="">
+                            <label for="">전화번호</label>
+                            <input type="tel">
+                            <label for="">별칭</label>
+                            <input type="name">
+                            <label for="">지역</label>
+                            <select name="" id="">
+                                <option value="" selected>==선택==</option>
+                                <option value="">서울</option>
+                                <option value="">부산</option>
+                                <option value="">대구</option>
+                                <option value="">대전</option>
+                                <option value="">울산</option>
+                            </select>
+                            <label for="">성별</label>
+                            <div>
+                                <label for=""><input type="radio" name="gender">남자</label>
+                                    <label for=""><input type="radio" name="gender">여자</label>
+                            </div>
+                            <label for="">취미</label>
+                            <div>
+                                <label for=""><input type="checkbox">독서
+                                    <label for=""><input type="checkbox">음악감상
+                                        <label for=""><input type="checkbox">운동
+                                            <label for=""><input type="checkbox">게임
+                                            </label>
+                            </div>
+                            <label for="">생년월일</label>
+                            <input type="date">
+                            <div class="button">
+                                <button>회원가입</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer__1">
+                    <footer>cpyright by gildong hong. all rights reserved.</footer>
+                </div>
+            </div>
+        </div>
 </body>
+
 </html>

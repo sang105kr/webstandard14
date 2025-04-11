@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * { outline: 1px solid red;}
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height : 100px;
+      background-color: yellow;
+      padding-left: 0;
+    }
+    ul li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height:50px;
+      background-color: yellowgreen;
+      flex-basis: 100px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>
+      <button>클릭</button>
+    </li>
+  </ul>
+  <script>
+    
+    document.querySelector('ul').addEventListener('click',function(evt){
+      console.log('ul 클릭!')
+    },true);
+    document.querySelector('ul>li').addEventListener('click',function(){
+      console.log('li 클릭!')  
+    },true);    
+    document.querySelector('ul>li>button').addEventListener('click',function(){
+      console.log('button 클릭!')  
+    },true);    
+
+    document.querySelector('ul>li>button').addEventListener('click',function(){
+      console.log('button 클릭!')  
+    },false);       
+    document.querySelector('ul>li').addEventListener('click',function(){
+      console.log('li 클릭!')  
+    },false);  
+    document.querySelector('ul').addEventListener('click',function(evt){
+      console.log('ul 클릭!')
+    },false);       
+/*    
+    document.querySelector('ul>li>button').addEventListener('mouseenter',function(evt){
+      evt.target.style.backgroundColor = 'yellow';
+    },false);     
+    */
+    document.querySelector('ul>li>button').addEventListener('mouseout',function(evt){
+      evt.target.style.backgroundColor = 'pink';
+    },false);      
+    document.querySelector('ul>li>button').addEventListener('mouseover',function(evt){
+      evt.target.style.backgroundColor = 'yellowgreen';
+    },false);          
+  </script>
+</body>
+</html>

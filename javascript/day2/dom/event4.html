@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      width:50px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input class="op1" type="text">
+    <span>+</span>
+    <input class="op2" type="text">
+    <span>=</span>
+    <input class="result" type="text">
+  </div>
+  <div><button class="calBtn">계산하기</button></div>
+  <script>
+    const $calBtn = document.querySelector('.calBtn');
+    $calBtn.addEventListener('click',function(evt){
+      const $op1 = document.querySelector('.op1');
+      const $op2 = document.querySelector('.op2');
+
+      console.log($op1.value, $op2.value);
+      console.log(typeof($op1.value), typeof($op2.value));
+
+      const result = parseInt($op1.value) + parseInt($op2.value);
+      console.log(result)
+      const $result = document.querySelector('.result');
+      $result.value = result;
+    },false);
+  </script>
+</body>
+</html>
