@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul class="menu">
+    <li class="item item1">menu1</li>
+    <li class="item item2">menu2</li>
+    <li class="item item3">menu3</li>
+  </ul>
+  <div><button class="btn">클릭</button></div>
+  <script>
+    const $menu2 = window.document.querySelector('.item.item2'); //HTMLLIELEMENT
+    const $menu = window.document.querySelector('.menu'); //HTMLULELEMENT    
+    console.log($menu2);
+    console.dir($menu2);
+    console.log($menu2.textContent);
+    console.log($menu2.parentElement);
+    console.log($menu2.previousElementSibling);
+    console.log($menu2.nextElementSibling);
+    console.log($menu2.parentElement.parentElement);
+    console.log($menu.children);
+    for(let ele of $menu.children){
+      console.log(ele.textContent);
+      ele.style.backgroundColor ='yellow';
+    }
+    const $li = document.createElement('li');
+    $li.textContent = '추가메뉴';
+    $menu.appendChild($li);
+
+    const $btn = document.querySelector('.btn');
+    $btn.addEventListener('click',function(evt){
+      $menu.removeChild($li);
+    });
+  </script>
+</body>
+</html>
