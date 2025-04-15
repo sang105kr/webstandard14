@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul class="menu">
+    <li class="item item1">item1</li>
+    <li class="item item2">item2</li>
+    <li class="item item3">item3</li>
+  </ul>
+  <script>
+    const $item2 = document.querySelector('.item.item2');
+    $item2.addEventListener('click',function(e){
+      console.log(e.eventPhase); //이벤트 전파단계
+      console.log(e.type);  // 이벤트 타입
+      console.log(e.target); // 이벤트 타겟: 실제 이벤트가 발생한 엘리먼트
+      console.log(e.currentTarget); // 이벤트 리스너가 등록된요소
+    },true);//이벤트 캡처링 단계
+    $item2.addEventListener('click',function(e){
+      console.log(e.eventPhase); //이벤트 전파단계
+      console.log(e.type);  // 이벤트 타입
+      console.log(e.target); // 이벤트 타겟: 실제 이벤트가 발생한 엘리먼트
+      console.log(e.currentTarget); // 이벤트 리스너가 등록된요소
+    },false);//이벤트 버블링 단계
+
+    const $ul = document.querySelector('.menu');
+    $ul.addEventListener('click',function(e){
+      console.log(e.eventPhase); //이벤트 전파단계
+      console.log(e.type);  // 이벤트 타입
+      console.log(e.target); // 이벤트 타겟: 실제 이벤트가 발생한 엘리먼트
+      console.log(e.currentTarget); // 이벤트 리스너가 등록된요소
+    },true);//이벤트 캡처링 단계
+    $ul.addEventListener('click',function(e){
+      console.log(e.eventPhase); //이벤트 전파단계
+      console.log(e.type);  // 이벤트 타입
+      console.log(e.target); // 이벤트 타겟: 실제 이벤트가 발생한 엘리먼트
+      console.log(e.currentTarget); // 이벤트 리스너가 등록된요소
+    },false);//이벤트 버블링 단계
+  </script>
+</body>
+</html>

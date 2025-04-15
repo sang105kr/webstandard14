@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul class="menu">
+    <li class="item item1">item1</li>
+    <li class="item item2">item2</li>
+    <li class="item item3">item3</li>
+  </ul>
+  <script>
+    //문제3) 각 li 요소를 클릭하면 클릭된 요소의 배경색을 아래와 같이 반영하시오 
+    //      item1: 빨강, item2:초록, item3:파랑 (이벤트 위임) 
+    const $ul = document.querySelector('.menu');
+    $ul.addEventListener('click',e=>console.log(e.target.textContent));
+  </script>
+</body>
+</html>

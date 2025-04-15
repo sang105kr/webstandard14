@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul class="menu">
+    <li class="item item1">item1</li>
+    <li class="item item2">item2</li>
+    <li class="item item3">item3</li>
+  </ul>
+  <script>
+    //문제2) 각 li 요소를 클릭하면 li의 텍스트 컨텐트를 콘솔에 출력하시오.(이벤트 위임) 
+    const $ul = document.querySelector('.menu');
+    $ul.addEventListener('click',e=>console.log(e.target.textContent));
+  </script>
+</body>
+</html>
