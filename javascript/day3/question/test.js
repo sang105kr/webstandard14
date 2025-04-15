@@ -1,7 +1,4 @@
-const person = {
-  name:'홍길동',
-  age:20
-};
+const person = { name:'홍길동', age:20};
 
 // 객체 리터럴 접근하는 방법 2가지
 console.log(person.name); // 점(.) 접근법

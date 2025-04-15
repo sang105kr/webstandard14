@@ -20,4 +20,12 @@
     result = false || true;
     console.log(result); // true   
   }
+  {
+    let result = 0 || 1;
+    console.log(result); //1
+  }
+  {
+    let result = 2 || 0;
+    console.log(result); //2
+  }  
 }

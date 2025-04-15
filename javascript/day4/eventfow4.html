@@ -15,7 +15,23 @@
     //문제3) 각 li 요소를 클릭하면 클릭된 요소의 배경색을 아래와 같이 반영하시오 
     //      item1: 빨강, item2:초록, item3:파랑 (이벤트 위임) 
     const $ul = document.querySelector('.menu');
-    $ul.addEventListener('click',e=>console.log(e.target.textContent));
+    $ul.addEventListener('click',function(e){
+      console.dir(e.target.tagName); // 이벤트 타겟의 태그명
+      console.dir(e.target.className); // 이벤트 타겟의 클래스값
+      console.dir(e.target.textContent); // 이벤트 타겟의 텍스트 컨텐트
+      const classValue = e.target.classList[1];  
+      switch(classValue){
+        case 'item1':
+          e.target.style.backgroundColor = '#f00';  
+          break;
+        case 'item2':
+          e.target.style.backgroundColor = '#0f0';
+          break;
+        case 'item3':
+          e.target.style.backgroundColor = '#00f';
+          break;
+      }
+    });
   </script>
 </body>
 </html>
