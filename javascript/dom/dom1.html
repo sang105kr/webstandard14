@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    console.log(document.documentElement); //html
+    console.log(document.querySelector('html'));
+    console.log(document.body); //body
+    console.log(document.querySelector('body'));
+    */
+    // 엘리먼트 생성
+    $button = document.createElement("button");
+    console.log($button);
+    // 텍스트 컨텐트
+    $button.textContent = '클릭';
+    console.log($button);
+    $button.innerHTML = '<b>클릭</b>';
+    console.log($button);
+    // 속성 추가
+    $button.setAttribute('id','btnOk');
+    $button.setAttribute('class','b1 b2');
+    // 이벤트 추가
+    $button.addEventListener('click',e=>{
+      console.log('hi');
+      // 버튼 엘리먼트의 자손 엘리먼트 찾기
+      const $b = $button.querySelector('b');
+      $b.style.color = 'blue';
+      // 특정 조상 엘리먼트 찾기
+      $body = $b.closest('body');
+      $body.style.backgroundColor = 'yellow';
+    })
+
+    document.body.append($button);
+
+    //특정엘리먼트의 시작태그 앞뒤, 종료태그 앞뒤에 엘리먼트 추가하기
+    $button.insertAdjacentHTML('beforebegin','<button>버튼1</button');
+    $button.insertAdjacentHTML('afterbegin','<button>버튼2</button');
+    $button.insertAdjacentHTML('beforeend','<button>버튼3</button');
+    $button.insertAdjacentHTML('afterend','<button>버튼4</button');        
+
+    /*  
+    $button.insertAdjacentText('beforebegin','버튼1');
+    $button.insertAdjacentText('afterbegin','버튼2');
+    $button.insertAdjacentText('beforeend','버튼3');
+    $button.insertAdjacentText('afterend','버튼4');        
+    */
+
+    //특정 엘리먼트 인근의 엘리먼트에 접근하기
+    console.log($button.parentElement);  
+    console.log($button.previousElementSibling.textContent);
+    console.log($button.nextElementSibling.textContent);
+    console.log($button.children);
+    
+    //컬렉션 순회
+    for(let ele of $button.children){
+      console.log(ele);
+    }
+    //컬렉션을 배열객체로 변환하여 고차함수 사용하기
+    Array.from($button.children).forEach( ele => {
+      console.log(ele.textContent);
+      ele.style.fontSize = '2rem';
+    });
+
+    //엘리먼트 삭제
+    const $button5 = document.createElement('button');
+    $button5.textContent = '버튼5';
+    $button5.addEventListener('click',e=>{
+      document.querySelector('button').remove();
+    });
+    document.body.append($button5);
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+  <ul>
+    <li>사과</li>
+    <li>오렌지</li>
+    <li>바나나</li>
+    <li>수박</li>
+  </ul>
+  -->
+  <script>
+    const $ul = document.createElement('ul');
+    const fruits = ['사과','오렌지','바나나','수박'];
+
+    const fragment = new DocumentFragment();
+    for(let fruit of fruits){
+      const $li = document.createElement('li');
+      $li.textContent = fruit;
+      fragment.append($li)
+    }
+
+    document.body.append($ul);
+    $ul.append(fragment);
+  </script>
+</body>
+</html>
