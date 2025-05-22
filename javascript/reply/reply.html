@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>댓글 기능 구현</title>
+    <style>
+        .comment {
+            display: flex;
+            align-items: center; /* 수직 가운데 정렬 */
+            margin-bottom: 10px; /* 댓글 사이 간격 */
+        }
+
+        .comment-text {
+            flex-grow: 1; /* 댓글 텍스트가 가능한 공간을 채움 */
+            margin-right: 10px; /* 댓글 텍스트와 버튼 간의 간격 */
+        }
+
+        .comment-buttons {
+            display: flex; /* 버튼을 가로로 정렬 */
+            gap: 5px; /* 버튼 간의 간격 */
+        }
+
+        /* 모달 스타일 */
+        #delete-dialog {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="comments-section">
+        <h2>댓글</h2>
+        <div id="comment-form">
+            <textarea id="comment-input" placeholder="댓글을 작성하세요"></textarea>
+            <button id="submit-button">댓글 작성</button>
+        </div>
+        <div id="comments-list"></div>
+    </div>
+
+    <!-- 삭제 확인 다이얼로그 -->
+    <dialog id="delete-dialog">
+        <p>삭제하시겠습니까?</p>
+        <button id="confirm-delete">예</button>
+        <button id="cancel-delete">아니오</button>
+    </dialog>
+
+    <script src="reply.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li class="item item1"></li>
+    <li class="item item2"></li>
+    <li class="item item3"></li>
+  </ul>
+  <table>
+    <tr id="user1" data-id="100" data-age="30" data-date-of-birth="2000.01.01"><td>홍길동</td></tr>
+    <tr id="user2" data-id="101" data-age="40" data-date-of-birth="2000.02.01"><td>홍길순</td></tr>
+  </table>
+  <script>
+    console.dir(user1);
+    console.log(user1.textContent);
+    console.dir(user1.getAttribute('id'));
+    console.dir(user1.getAttribute('data-id'));
+    console.dir(user1.getAttribute('data-age'));
+    console.dir(user1.getAttribute('data-date-of-birth'));
+    //dataset
+    console.dir(user1.dataset);
+    console.dir(user1.dataset.id);
+    console.dir(user1.dataset.age);
+    console.dir(user1.dataset.dateOfBirth);
+    // 
+    const $trs = document.querySelectorAll('tr');
+    console.log(Array.from($trs));
+    console.log([...$trs]);
+    [...$trs].forEach(tr=>tr.addEventListener('click',e=>{
+      const $li = document.querySelector('.item.item1')
+      $li.textContent = e.currentTarget.dataset.id;
+    }))
+  </script>
+</body>
+</html>
